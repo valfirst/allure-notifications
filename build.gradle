@@ -48,15 +48,3 @@ tasks.withType(JavaCompile) {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'guru.qa.allure.notifications.Application'
-        )
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-    duplicatesStrategy = DuplicatesStrategy.WARN
-}
