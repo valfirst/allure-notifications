@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 group 'allure.notifications'
@@ -65,3 +66,12 @@ if (JavaVersion.current().isJava11Compatible()) {
         }
     }
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
