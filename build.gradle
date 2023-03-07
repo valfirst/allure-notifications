@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     def lombok = '1.18.24'
-    def slf4j = '1.7.36'
+    def slf4j = '2.0.6'
 
     annotationProcessor("org.projectlombok:lombok:$lombok")
     compileOnly("org.projectlombok:lombok:$lombok")
